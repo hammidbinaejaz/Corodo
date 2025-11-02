@@ -8,15 +8,15 @@ export function Footer() {
         <div>
             <div className="h-[40vh] md:h-[40rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
 
-                <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold text-center text-white relative z-20 font-chillax mb-2">
-                    CAREER PILOT
+                <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold text-center text-white relative z-20 mb-2" style={{ fontFamily: 'var(--font-inter)' }}>
+                    CORODO
                 </h1>
 
                 <div className="w-[20rem] md:w-[40rem] h-20 md:h-40 relative">
-                    <div className="absolute inset-x-8 md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-                    <div className="absolute inset-x-8 md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-                    <div className="absolute inset-x-16 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
-                    <div className="absolute inset-x-16 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+                    <div className="absolute inset-x-8 md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-[#1e40af] to-transparent h-[2px] w-3/4 blur-sm" />
+                    <div className="absolute inset-x-8 md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-[#1e40af] to-transparent h-px w-3/4" />
+                    <div className="absolute inset-x-16 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-[#60a5fa] to-transparent h-[5px] w-1/4 blur-sm" />
+                    <div className="absolute inset-x-16 md:inset-x-60 top-0 bg-gradient-to-r from-transparent via-[#60a5fa] to-transparent h-px w-1/4" />
 
                     <SparklesCore
                         background="transparent"

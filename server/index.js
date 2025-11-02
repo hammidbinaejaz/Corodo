@@ -35,5 +35,5 @@ connectMongoDB()
 
 // Default Route
 app.get("/", (req, res) => {
-    res.send("🚀 Welcome to Career Craft AI Backend");
+    res.send("OK");
 });

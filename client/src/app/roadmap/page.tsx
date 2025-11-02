@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 const roles = [
   'Frontend', 'Backend', 'DevOps', 'Full Stack', 'AI Engineer', 
   'Data Analyst', 'AI and Data Scientist', 'Android', 'iOS', 'PostgreSQL', 
@@ -49,16 +47,19 @@ export default function Hero() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-5xl">
         {roles.map((role) => (
-          <motion.button
+          <div
             key={role}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="h-16 w-full border-2 hover:border-none rounded-lg flex items-center justify-between px-4 font-semibold cursor-pointer transition-all hover:bg-[#7d47ea]"
+            className="h-16 w-full border-2 hover:border-none rounded-lg flex items-center justify-between px-4 font-semibold cursor-pointer transition-all hover:bg-[#1e40af] shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
             onClick={() => handleRoleClick(role)}
           >
             {role}
-          </motion.button>
+          </div>
         ))}
+      </div>
+      <div className="w-full mt-8 pb-8 text-center">
+        <p className="text-sm text-white/60">
+          Built with ❤️ by <span className="text-[#1e40af] font-semibold">Hammid</span> and <span className="text-[#1e40af] font-semibold">Bupesh</span>
+        </p>
       </div>
     </div>
   );

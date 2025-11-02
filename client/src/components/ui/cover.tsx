@@ -51,7 +51,7 @@ export const Cover = ({
                 duration: 0.2,
               },
             }}
-            className="h-full w-full overflow-hidden absolute inset-0"
+            style={{ height: '100%', width: '100%', overflow: 'hidden', position: 'absolute', inset: 0 }}
           >
             <motion.div
               animate={{
@@ -64,7 +64,7 @@ export const Cover = ({
                   repeat: Infinity,
                 },
               }}
-              className="w-[200%] h-full flex"
+              style={{ width: '200%', height: '100%', display: 'flex' }}
             >
               <SparklesCore
                 background="transparent"
@@ -130,10 +130,7 @@ export const Cover = ({
             duration: 0.2,
           },
         }}
-        className={cn(
-          "text-white inline-block relative z-20 group-hover/cover:text-white transition duration-200",
-          className
-        )}
+        style={{ color: 'white', display: 'inline-block', position: 'relative', zIndex: 20 }}
       >
         {children}
       </motion.span>
@@ -168,7 +165,7 @@ export const Beam = ({
       viewBox={`0 0 ${width ?? "600"} 1`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("absolute inset-x-0 w-full", className)}
+      style={{ position: 'absolute', left: 0, right: 0, width: '100%' }}
       {...svgProps}
     >
       <motion.path

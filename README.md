@@ -1,6 +1,6 @@
-# AI Career Pilot
+# Corodo
 
-Welcome to **AI Career Pilot**, your all-in-one AI-powered career guidance platform. This application provides a suite of intelligent AI agents to help individuals build professional portfolios, receive career advice, plan career roadmaps, and prepare for interviews with AI-driven assistance.
+Welcome to **Corodo**, your all-in-one AI-powered career guidance platform built by Hammid Bin Aejaz. This application provides a suite of intelligent AI agents to help individuals build professional portfolios, receive career advice, plan career roadmaps, and prepare for interviews with AI-driven assistance.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Welcome to **AI Career Pilot**, your all-in-one AI-powered career guidance platf
 
 ## Introduction
 
-**AI Career Pilot** is designed to empower students and professionals by leveraging AI for career development. Whether you're looking for the best career path, need a step-by-step roadmap, want to build an impressive portfolio, or need AI-assisted interview preparation, AI Career Pilot has you covered.
+**Corodo** is designed to empower students and professionals by leveraging AI for career development. Whether you're looking for the best career path, need a step-by-step roadmap, want to build an impressive portfolio, or need AI-assisted interview preparation, Corodo has you covered.
 
 ## 🚀 Problem Statements & Solutions
 
@@ -25,7 +25,7 @@ Welcome to **AI Career Pilot**, your all-in-one AI-powered career guidance platf
 
 **Problem:** When starting a career, we often seek guidance from experienced professionals who can offer insights and recommendations. However, finding a knowledgeable mentor is not always easy.
 
-**Solution:** AI Career Pilot offers an **AI Career Advisor** that provides personalized career recommendations based on your skills, interests, and market trends, helping you make informed decisions about your career path.
+**Solution:** Corodo offers an **AI Career Advisor** that provides personalized career recommendations based on your skills, interests, and market trends, helping you make informed decisions about your career path.
 
 ### 2. Difficulty in Building a Portfolio
 
@@ -37,7 +37,7 @@ Welcome to **AI Career Pilot**, your all-in-one AI-powered career guidance platf
 
 **Problem:** When entering a new field or learning a new skill, we often struggle to find a well-structured, step-by-step roadmap that outlines what to learn and how to progress.
 
-**Solution:** AI Career Pilot provides a **Roadmap for Success**, a customized learning and skill development plan that guides users through acquiring the necessary skills and certifications for their desired career.
+**Solution:** Corodo provides a **Roadmap for Success**, a customized learning and skill development plan that guides users through acquiring the necessary skills and certifications for their desired career.
 
 ### 4. Ineffective Interview Preparation
 
@@ -62,12 +62,12 @@ We have used **Promptrepo** to extract the user's details for generating portfol
 - **Frontend:** Next.js, Tailwind CSS  
 - **Backend:** Node.js, Express.js, MongoDB  
 - **AI & NLP:**  Promptrepo, Mistral AI, Gemini AI, Google Cloud Speech-to-Text
-- **Authentication:** Clerk Authentication - Google, LinkedIn, Email
+- **Authentication:** No authentication required - direct access to all features
 - **Deployment:** Vercel (Frontend), Vercel (Backend)  
 - **Other Tools:** Framer Motion (UI Animations), Aceternity UI, Magic UI, Shadcn
 
 ## 🌍 Domain  
-AI Career Pilot is a **Full-Stack AI Development** project, integrating AI-driven career guidance with modern web technologies. 
+Corodo is a **Full-Stack AI Development** project built by Hammid Bin Aejaz, integrating AI-driven career guidance with modern web technologies. 
 
 ## 🚀 Live Deployment
 Frontend Deployed Link: https://ai-career-pilot.vercel.app/
@@ -78,7 +78,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Installation
 
-To get started with **AI Career Pilot**, follow these steps:
+To get started with **Corodo**, follow these steps:
 
 ### Prerequisites
 - Node.js (v14 or later)
@@ -140,7 +140,7 @@ To get started with **AI Career Pilot**, follow these steps:
 
 ## Usage
 
-Once installed, you can access the following features from the **AI Career Pilot** dashboard:
+Once installed, you can access the following features from the **Corodo** dashboard:
 
 1. **AI Career Advisor** – Complete a brief survey about your skills and interests to receive personalized career recommendations.
 2. **Roadmap for Success** – View your tailored career roadmap and access resources to build your skills.
@@ -149,7 +149,7 @@ Once installed, you can access the following features from the **AI Career Pilot
 
 ## Contributing
 
-We welcome contributions to **AI Career Pilot**! To contribute:
+We welcome contributions to **Corodo**! To contribute:
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/your-feature`).
@@ -165,4 +165,4 @@ For any questions or inquiries, feel free to reach out to us at:
 
 - Email: vinaykusumanchi9@gmail.com
 - GitHub: https://github.com/KusumanchiVinay/AI-CAREER-PILOT
-- Website: [AI Career Pilot](https://ai-career-pilot.vercel.app/)
+- Website: [Corodo](https://corodo.vercel.app/)

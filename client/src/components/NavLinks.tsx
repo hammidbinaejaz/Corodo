@@ -13,15 +13,7 @@ export const projects = [
     link: "advisor",
   },
   {
-    title: "Portfolios",
-    link: "portfolios",
-  },
-  {
     title: "Roadmaps",
     link: "roadmap",
-  },
-  {
-    title: "Interview Bot",
-    link: "interviewbot",
   },
 ];

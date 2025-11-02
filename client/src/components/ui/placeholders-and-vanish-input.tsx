@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
 import { IconSquareRoundedX } from "@tabler/icons-react";
 import { useMyContext } from "@/context/MyContext";
-import { useUser } from "@clerk/nextjs";
 
 const loadingStates = [
   {
@@ -16,19 +15,10 @@ const loadingStates = [
     text: "Understanding your skills and experience...",
   },
   {
-    text: "Generating your personalized portfolio...",
+    text: "Processing your request...",
   },
   {
-    text: "Optimizing design and layout...",
-  },
-  {
-    text: "Finalizing details...",
-  },
-  {
-    text: "Deploying your portfolio website...",
-  },
-  {
-    text: "Your portfolio is ready! 🚀",
+    text: "Almost done...",
   },
 ];
 
@@ -198,32 +188,12 @@ export function PlaceholdersAndVanishInput({
   };
 
   async function updateProfile(data:any) {
-    try {
-      const response = await fetch('https://career-craft-ai-server.vercel.app/user/updateprofile', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: user?.fullName || "",
-          email: user?.primaryEmailAddress?.emailAddress || "",
-          profile:data
-        }),
-      });
-      console.log(user?.fullName)
-      console.log(data)
-
-      if (!response.ok) {
-        throw new Error(`Failed to update profile: ${response.status} ${response.statusText}`);
-      }
-
-      const result = await response.json();
-      console.log('Profile updated successfully:', result);
-      return result;
-    } catch (error:any) {
-      console.error('Error updating profile:', error.message);
-      return null;
-    }
+    // Mock successful response - API endpoint removed
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ success: true, data });
+      }, 100);
+    });
   }
 
 
@@ -232,11 +202,6 @@ export function PlaceholdersAndVanishInput({
 
     if (!value.trim()) {
       alert("Input cannot be empty!");
-      setLoading(false);
-      return;
-    }
-    if (!isSignedIn) {
-      alert("You must be logged in to submit!");
       setLoading(false);
       return;
     }
@@ -256,9 +221,9 @@ export function PlaceholdersAndVanishInput({
         throw new Error(`HTTP error! Status: ${response.status}`);
 
       const data = await response.json();
-      console.log("Promptrepo Response:", data);
-
-      updateProfile(data[0]?.Portfolio_data);
+      
+      // Silently handle profile update (mocked)
+      await updateProfile(data[0]?.Portfolio_data);
 
     } catch (error) {
       console.error("Error fetching response:", error);
@@ -269,7 +234,6 @@ export function PlaceholdersAndVanishInput({
   };
 
   const [loading, setLoading] = useState(false);
-  const { isSignedIn, user } = useUser();
 
   return (
     <form
@@ -363,7 +327,17 @@ export function PlaceholdersAndVanishInput({
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -15, opacity: 0 }}
               transition={{ duration: 0.3, ease: "linear" }}
-              className="text-zinc-500 text-xs sm:text-sm font-normal pl-4 sm:pl-10 text-left w-[calc(100%-5rem)] truncate"
+              style={{
+                color: 'rgb(113 113 122)',
+                fontSize: '0.75rem',
+                fontWeight: 400,
+                paddingLeft: '1rem',
+                textAlign: 'left',
+                width: 'calc(100% - 5rem)',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+              }}
             >
               {placeholders[currentPlaceholder]}
             </motion.p>

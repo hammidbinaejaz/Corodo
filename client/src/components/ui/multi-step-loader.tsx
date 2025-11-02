@@ -1,5 +1,4 @@
 "use client";
-import { useMyContext } from "@/context/MyContext";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -57,7 +56,7 @@ const LoaderCore = ({
         return (
           <motion.div
             key={index}
-            className={cn("text-left flex gap-2 mb-4")}
+            style={{ textAlign: 'left', display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}
             initial={{ opacity: 0, y: -(value * 40) }}
             animate={{ opacity: opacity, y: -(value * 40) }}
             transition={{ duration: 0.5 }}
@@ -104,7 +103,6 @@ export const MultiStepLoader = ({
   loop?: boolean;
 }) => {
   const [currentState, setCurrentState] = useState(0);
-  const { userProfile } = useMyContext();
 
 
   useEffect(() => {
@@ -115,9 +113,6 @@ export const MultiStepLoader = ({
     const timeout = setTimeout(() => {
       setCurrentState((prevState) => {
         if (prevState === loadingStates.length - 1) {
-          setCurrentState(0)
-          const url = `https://myai-portfolio.vercel.app/?id=${userProfile.UserId}`
-          window.open(url, "_blank");
           return prevState;
         }
 
@@ -144,7 +139,17 @@ export const MultiStepLoader = ({
           exit={{
             opacity: 0,
           }}
-          className="w-full h-full fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-2xl"
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'fixed',
+            inset: 0,
+            zIndex: 100,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backdropFilter: 'blur(16px)',
+          }}
         >
           <div className="h-96  relative">
             <LoaderCore value={currentState} loadingStates={loadingStates} />

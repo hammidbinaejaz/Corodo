@@ -119,12 +119,12 @@ export function Userflow() {
                                 {steps[0].map((step, index) => (
                                     <motion.div
                                         key={index}
-                                        className="bg-[#121212] p-4 md:p-6 rounded-lg shadow-lg hover:shadow-[#7D47EA]/50 transition-shadow duration-300"
+                                        style={{ backgroundColor: '#121212', padding: '1rem', borderRadius: '0.5rem', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.4, delay: index * 0.2 }}
                                     >
-                                        <h3 className="hidden md:block text-xl font-semibold text-[#7D47EA]">
+                                        <h3 className="hidden md:block text-xl font-semibold text-[#1e40af]">
                                             {step.step}
                                         </h3>
                                         <h4 className="mt-2 text-md md:text-lg font-medium md:font-bold text-white">{step.title}</h4>
@@ -150,12 +150,12 @@ export function Userflow() {
                                 {steps[1].map((step, index) => (
                                     <motion.div
                                         key={index}
-                                        className="bg-[#121212] p-4 md:p-6 rounded-lg shadow-lg hover:shadow-[#7D47EA]/50 transition-shadow duration-300"
+                                        style={{ backgroundColor: '#121212', padding: '1rem', borderRadius: '0.5rem', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.4, delay: index * 0.2 }}
                                     >
-                                        <h3 className="hidden md:block text-xl font-semibold text-[#7D47EA]">
+                                        <h3 className="hidden md:block text-xl font-semibold text-[#1e40af]">
                                             {step.step}
                                         </h3>
                                         <h4 className="mt-2 text-md md:text-lg font-medium md:font-bold text-white">{step.title}</h4>
@@ -181,12 +181,12 @@ export function Userflow() {
                                 {steps[2].map((step, index) => (
                                     <motion.div
                                         key={index}
-                                        className="bg-[#121212] p-4 md:p-6 rounded-lg shadow-lg hover:shadow-[#7D47EA]/50 transition-shadow duration-300"
+                                        style={{ backgroundColor: '#121212', padding: '1rem', borderRadius: '0.5rem', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.4, delay: index * 0.2 }}
                                     >
-                                        <h3 className="hidden md:block text-xl font-semibold text-[#7D47EA]">
+                                        <h3 className="hidden md:block text-xl font-semibold text-[#1e40af]">
                                             {step.step}
                                         </h3>
                                         <h4 className="mt-2 text-md md:text-lg font-medium md:font-bold text-white">{step.title}</h4>
@@ -212,12 +212,12 @@ export function Userflow() {
                                 {steps[3].map((step, index) => (
                                     <motion.div
                                         key={index}
-                                        className="bg-[#121212] p-4 md:p-6 rounded-lg shadow-lg hover:shadow-[#7D47EA]/50 transition-shadow duration-300"
+                                        style={{ backgroundColor: '#121212', padding: '1rem', borderRadius: '0.5rem', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)' }}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.4, delay: index * 0.2 }}
                                     >
-                                        <h3 className="hidden md:block text-xl font-semibold text-[#7D47EA]">
+                                        <h3 className="hidden md:block text-xl font-semibold text-[#1e40af]">
                                             {step.step}
                                         </h3>
                                         <h4 className="mt-2 text-md md:text-lg font-medium md:font-bold text-white">{step.title}</h4>

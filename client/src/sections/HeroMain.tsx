@@ -1,36 +1,17 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Cover } from "@/components/ui/cover";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
-import { PlaceholdersAndVanishInput } from "../components/ui/placeholders-and-vanish-input";
-import Image from "next/image";
-import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import linear from "@/assets/linear.webp"
 import { RoboAnimation } from "@/components/robo-animation";
 import { FloatingPaper } from "@/components/floating-paper";
 import { SparklesCore } from "@/components/sparkles2";
+import { ArrowRight, Map } from "lucide-react";
 
 
 export default function HeroMain() {
-
-    const placeholders = [
-        "My name is Alex Carter, and I’m a UI/UX Designer...",
-        "I’m a freelance photographer specializing in portraits...",
-        "I build sleek and scalable web applications as a developer...",
-        "Passionate about digital marketing and brand storytelling...",
-        "I create cinematic wedding films that capture emotions...",
-    ];
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // console.log(e.target.value);
-    };
-    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        // console.log("submitted");
-    };
-
     return (
         <div className="w-full flex flex-col items-center justify-center p-4 md:p-8 relative z-20 overflow-hidden">
             <div className="mt-[12vh]"></div>
@@ -52,41 +33,57 @@ export default function HeroMain() {
                 ✨ <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
                 <span
                     className={cn(
-                        `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#7D47EA] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                        `inline animate-gradient bg-gradient-to-r from-[#60a5fa] via-[#1e40af] to-[#60a5fa] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
                     )}
                 >
-                    Introducing AI Career Pilot
+                    Introducing Corodo
                 </span>
             </AnimatedGradientText>
-            <div className="relative z-20 mx-auto my-6 text-center text-3xl font-semibold tracking-tight text-neutral-300 md:text-6xl">
-                <p>Craft Your Future with</p>
-                <div className="mt-2 md:mt-8"><Cover className="py-2">AI-Optimized Resumes & Portfolios</Cover></div>
+            <div className="relative z-20 mx-auto my-6 text-center">
+                <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-white mb-4" style={{ fontFamily: 'var(--font-inter)' }}>
+                    Hammid and Bupesh
+                </h1>
+                <p className="text-xl md:text-2xl font-medium text-neutral-300 mb-6" style={{ fontFamily: 'var(--font-inter)' }}>
+                    AI & ML Engineer | Builder of Corodo
+                </p>
+                <div className="mt-4 text-center text-3xl font-semibold tracking-tight text-neutral-300 md:text-5xl">
+                    <p>AI-Powered Career Guidance</p>
+                    <div className="mt-2 md:mt-4"><Cover className="py-2">Your Path to Professional Success</Cover></div>
+                </div>
             </div>
             <p className="relative z-20 mx-auto mt-4 max-w-lg px-4 text-center text-base font-medium text-gray-300 md:text-lg lg:text-lg">
-                Create Your Stunning Portfolio in Seconds. Just Enter Your Details and Get Started!
+                Get personalized career advice and roadmap guidance tailored to your goals.
             </p>
-
-            <div className="absolute top-80 right-0 w-96 h-96">
-                <RoboAnimation />
-            </div>
-            <div className="mt-6 mb-4">
-                <PlaceholdersAndVanishInput
-                    placeholders={placeholders}
-                    onChange={handleChange}
-                    onSubmit={onSubmit}
-                />
-            </div>
-            <div className="flex flex-col overflow-hidden">
-                <ContainerScroll>
-                    <Image
-                        src={linear}
-                        alt="hero"
-                        height={720}
-                        width={1400}
-                        className="mx-auto rounded-2xl object-cover h-full object-left-top"
-                        draggable={false}
-                    />
-                </ContainerScroll>
+            
+            {/* CTA Buttons */}
+            <div className="relative z-20 flex flex-col sm:flex-row gap-4 mt-8 md:mt-12 items-center justify-center">
+                <Link 
+                    href="/advisor"
+                    className={cn(
+                        "group relative px-8 py-4 rounded-xl bg-[#1e40af] text-white font-semibold text-lg",
+                        "transition-all duration-300 hover:bg-[#1e3a94] hover:shadow-lg hover:shadow-[#1e40af]/50",
+                        "hover:scale-105 active:scale-95",
+                        "flex items-center gap-2"
+                    )}
+                >
+                    <span>Try AI Advisor</span>
+                    <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#60a5fa] to-[#1e40af] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl" />
+                </Link>
+                
+                <Link 
+                    href="/roadmap"
+                    className={cn(
+                        "group relative px-8 py-4 rounded-xl border-2 border-[#1e40af]/50 text-[#1e40af] font-semibold text-lg",
+                        "bg-[#1e40af]/5 backdrop-blur-sm",
+                        "transition-all duration-300 hover:bg-[#1e40af]/10 hover:border-[#1e40af] hover:shadow-lg hover:shadow-[#1e40af]/20",
+                        "hover:scale-105 active:scale-95",
+                        "flex items-center gap-2"
+                    )}
+                >
+                    <Map className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                    <span>Explore Roadmaps</span>
+                </Link>
             </div>
         </div>
     );

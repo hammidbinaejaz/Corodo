@@ -7,7 +7,7 @@ export function RoboAnimation() {
   return (
     <div className="relative w-full h-full">
       <motion.div
-        className="absolute inset-0 flex items-center justify-center"
+        style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         animate={{
           y: [0, -20, 0],
         }}
@@ -19,7 +19,7 @@ export function RoboAnimation() {
       >
         <div className="relative">
           <motion.div
-            className="absolute -inset-4 bg-purple-500/20 rounded-full blur-xl"
+            style={{ position: 'absolute', inset: '-1rem', backgroundColor: 'rgba(168, 85, 247, 0.2)', borderRadius: '9999px', filter: 'blur(24px)' }}
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.5, 0.8, 0.5],

@@ -15,7 +15,19 @@ export function LampTitle({ Title }: { Title: string }) {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="font-chillax bg-gradient-to-br from-slate-300 to-white/80 py-4 bg-clip-text text-center text-5xl font-medium tracking-tight text-transparent md:text-7xl -mt-8"
+        style={{ 
+          background: 'linear-gradient(to bottom right, rgb(203 213 225), rgba(255, 255, 255, 0.8))',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          paddingTop: '1rem',
+          paddingBottom: '1rem',
+          textAlign: 'center',
+          fontSize: '3rem',
+          fontWeight: 500,
+          letterSpacing: '-0.025em',
+          marginTop: '-2rem'
+        }}
       >
         {Title}
       </motion.h1>
@@ -47,9 +59,15 @@ export const LampContainer = ({
             ease: "easeInOut",
           }}
           style={{
-            backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
+            position: 'absolute',
+            inset: 'auto',
+            right: '50%',
+            height: '14rem',
+            overflow: 'visible',
+            width: '30rem',
+            backgroundImage: 'conic-gradient(from 70deg at center top, #854CFF, transparent, transparent)',
+            color: 'white',
           }}
-          className="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-[#854CFF] via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
         >
           <div className="absolute  w-[100%] left-0 bg-[#0A0A0A] h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
           <div className="absolute  w-40 h-[100%] left-0 bg-[#0A0A0A]  bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
@@ -63,9 +81,14 @@ export const LampContainer = ({
             ease: "easeInOut",
           }}
           style={{
-            backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
+            position: 'absolute',
+            inset: 'auto',
+            left: '50%',
+            height: '14rem',
+            width: '30rem',
+            backgroundImage: 'conic-gradient(from 290deg at center top, transparent, transparent, #854CFF)',
+            color: 'white',
           }}
-          className="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-[#854CFF] text-white [--conic-position:from_290deg_at_center_top]"
         >
           <div className="absolute  w-40 h-[100%] right-0 bg-[#0A0A0A]  bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
           <div className="absolute  w-[100%] right-0 bg-[#0A0A0A] h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
@@ -81,7 +104,17 @@ export const LampContainer = ({
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-[#854CFF] blur-2xl"
+          style={{
+            position: 'absolute',
+            inset: 'auto',
+            zIndex: 30,
+            height: '9rem',
+            width: '16rem',
+            transform: 'translateY(-6rem)',
+            borderRadius: '9999px',
+            backgroundColor: '#854CFF',
+            filter: 'blur(40px)',
+          }}
         ></motion.div>
         <motion.div
           initial={{ width: "15rem" }}
@@ -91,7 +124,15 @@ export const LampContainer = ({
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-[#854CFF] "
+          style={{
+            position: 'absolute',
+            inset: 'auto',
+            zIndex: 50,
+            height: '0.125rem',
+            width: '30rem',
+            transform: 'translateY(-7rem)',
+            backgroundColor: '#854CFF',
+          }}
         ></motion.div>
 
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-[#0A0A0A] "></div>

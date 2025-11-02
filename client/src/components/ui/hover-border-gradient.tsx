@@ -35,14 +35,14 @@ export function HoverBorderGradient({
     };
 
     const movingMap: Record<Direction, string> = {
-        TOP: "radial-gradient(20.7% 50% at 50% 0%, #7D47EA 0%, rgba(255, 255, 255, 0) 100%)", // orange-500
-        LEFT: "radial-gradient(16.6% 43.1% at 0% 50%, #7D47EA 0%, rgba(255, 255, 255, 0) 100%)", // orange-500
-        BOTTOM: "radial-gradient(20.7% 50% at 50% 100%, #7D47EA 0%, rgba(255, 255, 255, 0) 100%)", // orange-500
-        RIGHT: "radial-gradient(16.2% 41.2% at 100% 50%, #7D47EA 0%, rgba(255, 255, 255, 0) 100%)", // orange-500
+        TOP: "radial-gradient(20.7% 50% at 50% 0%, #1e40af 0%, rgba(255, 255, 255, 0) 100%)",
+        LEFT: "radial-gradient(16.6% 43.1% at 0% 50%, #1e40af 0%, rgba(255, 255, 255, 0) 100%)",
+        BOTTOM: "radial-gradient(20.7% 50% at 50% 100%, #1e40af 0%, rgba(255, 255, 255, 0) 100%)",
+        RIGHT: "radial-gradient(16.2% 41.2% at 100% 50%, #1e40af 0%, rgba(255, 255, 255, 0) 100%)",
     };
 
     const highlight =
-        "radial-gradient(75% 181% at 50% 50%, #7D47EA 0%, rgba(255, 255, 255, 0) 100%)"; // orange-500
+        "radial-gradient(75% 181% at 50% 50%, #1e40af 0%, rgba(255, 255, 255, 0) 100%)";
 
     useEffect(() => {
         if (!hovered) {
@@ -72,10 +72,11 @@ export function HoverBorderGradient({
                 {children}
             </div>
             <motion.div
-                className="absolute inset-0 rounded-[inherit]"
                 style={{
-                    filter: "blur(3px)",
                     position: "absolute",
+                    inset: 0,
+                    borderRadius: "inherit",
+                    filter: "blur(3px)",
                     width: "100%",
                     height: "100%",
                 }}

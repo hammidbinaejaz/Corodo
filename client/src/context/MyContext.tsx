@@ -9,7 +9,6 @@ interface UserProfile {
   name: string;
   picture?: string;
   email: string;
-  portfolios?: any[]; 
   profile?: Record<string, any>; 
 }
 
@@ -40,7 +39,6 @@ export const MyProvider = ({ children }: MyProviderProps) => {
     name: "",
     picture: "",
     email: "",
-    portfolios: [],
     profile: {},
   });
 

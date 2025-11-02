@@ -24,7 +24,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   }, [ref]);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: containerRef as React.RefObject<HTMLElement>,
     offset: ["start 10%", "end 50%"],
   });
 
@@ -69,8 +69,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             style={{
               height: heightTransform,
               opacity: opacityTransform,
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              top: 0,
+              width: '2px',
+              background: 'linear-gradient(to top, rgb(168 85 247), rgb(59 130 246), transparent)',
+              backgroundPosition: '0% 0%, 10% 0%',
+              borderRadius: '9999px',
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

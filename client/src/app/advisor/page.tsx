@@ -29,7 +29,7 @@ export default function Chatbot() {
       const response = await fetch('/api/advisor', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: "You are CareerCraft AI, the go-to senior for career advice—smart, chill, and always on point. Give practical, no-nonsense advice with a touch of humor, making career growth easy. Keep it short, sharp, and real—no essays, no robotic talk. Use simple English, no complex terms. If the question isn’t career-related, say: 'I’m here for career advice! Try asking about jobs, skills, or growth.' For greetings like 'Hi' or 'Thank you, respond casually like a real person. No AI talk—own it. This is the user's prompt -> " + input }),
+        body: JSON.stringify({ message: "You are Corodo, an AI-powered career guidance platform built by Hammid Bin Aejaz. You're the go-to AI for career advice—smart, helpful, and always on point. Give practical, no-nonsense advice with a touch of professionalism, making career growth easy. Keep it short, sharp, and real—no essays, no robotic talk. Use simple English, no complex terms. If the question isn't career-related, say: 'I'm here for career advice! Try asking about jobs, skills, or growth.' For greetings like 'Hi' or 'Thank you, respond casually like a real person. No AI talk—own it. This is the user's prompt -> " + input }),
       });
 
       const data = await response.json();
@@ -60,7 +60,7 @@ export default function Chatbot() {
         }
         {messages.map((msg, index) => (
           <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`p-3 rounded-lg max-w-md ${msg.sender === 'user' ? 'bg-[#7d47ea]/70' : 'bg-gray-700'}`}>
+            <div className={`p-3 rounded-lg max-w-md ${msg.sender === 'user' ? 'bg-[#1e40af]/70' : 'bg-gray-700'}`}>
               <ReactMarkdown>{msg.text}</ReactMarkdown>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Chatbot() {
               onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
               disabled={loading}
             />
-            <button onClick={sendMessage} className="bg-[#7d47ea] p-2 font-semibold min-w-max rounded-full
+            <button onClick={sendMessage} className="bg-[#1e40af] hover:bg-[#1e3a94] p-2 font-semibold min-w-max rounded-lg transition-all
                             hover:scale-105
                             active:bg-[radial-gradient(72.97%_270%_at_50%_50%,_rgb(150,100,250)_0%,_rgb(90,20,220)_85%)]
                             active:shadow-[rgba(150,100,250,0.75)_0px_2px_10px_0px,_rgb(150,100,250)_0px_1px_1px_0px_inset] 
@@ -105,6 +105,11 @@ export default function Chatbot() {
         </div>
       </div>
       <p className='text-sm font-light mt-2'>AI suggestions may not be perfect. Please verify before use.</p>
+      <div className="w-full mt-8 pb-4">
+        <p className="text-center text-sm text-white/60">
+          Built with ❤️ by <span className="text-[#1e40af] font-semibold">Hammid</span> and <span className="text-[#1e40af] font-semibold">Bupesh</span>
+        </p>
+      </div>
     </div>
   );
 }

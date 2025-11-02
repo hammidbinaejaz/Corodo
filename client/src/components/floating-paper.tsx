@@ -27,7 +27,6 @@ export function FloatingPaper({ count = 5 }) {
       {Array.from({ length: count }).map((_, i) => (
         <motion.div
           key={i}
-          className="absolute"
           initial={{
             x: Math.random() * dimensions.width,
             y: Math.random() * dimensions.height,
@@ -46,6 +45,7 @@ export function FloatingPaper({ count = 5 }) {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
+          style={{ position: 'absolute' }}
         >
           <div className="relative w-16 h-20 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 flex items-center justify-center transform hover:scale-110 transition-transform">
             <FileText className="w-8 h-8 text-purple-400/50" />

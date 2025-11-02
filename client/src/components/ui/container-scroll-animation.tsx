@@ -9,7 +9,7 @@ export const ContainerScroll = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: containerRef as React.RefObject<HTMLElement>,
   });
   const [isMobile, setIsMobile] = React.useState(false);
 
@@ -68,8 +68,18 @@ export const Card = ({
         scale,
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
+        maxWidth: '80rem',
+        marginTop: '-3rem',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        height: '30rem',
+        width: '100%',
+        borderWidth: '4px',
+        borderColor: '#6C6C6C',
+        padding: '1rem',
+        backgroundColor: '#222222',
+        borderRadius: '30px',
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
       <div className=" h-full w-full  overflow-hidden rounded-2xl bg-[#171717] md:rounded-2xl md:p-4 ">
         {children}

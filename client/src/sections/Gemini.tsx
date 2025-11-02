@@ -4,9 +4,9 @@ import React from "react";
 import { GoogleGeminiEffect } from "@/components/ui/google-gemini-effect";
 
 export function Gemini() {
-  const ref = React.useRef(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: ref as React.RefObject<HTMLElement>,
     offset: ["start start", "end start"],
   });
 

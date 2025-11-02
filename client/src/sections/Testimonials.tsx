@@ -75,7 +75,7 @@ const thirdColumn = testimonials.slice(6, 9);
 
 const TestimonialsColumn = (props: { className?: string; testimonials: typeof testimonials; duration?: number }) => (
     <div className={props.className}>
-        <motion.div className="flex flex-col gap-6 py-6"
+        <motion.div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', paddingTop: '1.5rem', paddingBottom: '1.5rem' }}
             animate={{
                 translateY: "-50%"
             }}
