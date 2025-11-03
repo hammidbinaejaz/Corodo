@@ -15,10 +15,10 @@ export default function FooterMain() {
             </Link>
           </div>
           <div className="mt-4 text-base">
-            Built with ❤️ by <span className="text-[#1e40af] font-semibold">Hammid</span> and <span className="text-[#1e40af] font-semibold">Bupesh</span>
+          Built with ❤️ by <span className="text-[#1e40af] font-semibold">Hammid</span>
           </div>
           <div className="mt-2 text-sm text-white/40">
-            An AI-based career guidance platform built by Hammid Bin Aejaz
+            An AI-based career guidance platform built
           </div>
         </div>
         <div className="grid grid-cols-2 gap-10 items-start mt-10 md:mt-0">
