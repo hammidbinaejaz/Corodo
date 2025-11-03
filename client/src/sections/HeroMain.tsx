@@ -41,7 +41,7 @@ export default function HeroMain() {
             </AnimatedGradientText>
             <div className="relative z-20 mx-auto my-6 text-center">
                 <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-white mb-4" style={{ fontFamily: 'var(--font-inter)' }}>
-                    Hammid and Bupesh
+                    Hammid
                 </h1>
                 <p className="text-xl md:text-2xl font-medium text-neutral-300 mb-6" style={{ fontFamily: 'var(--font-inter)' }}>
                     AI & ML Engineer | Builder of Corodo
